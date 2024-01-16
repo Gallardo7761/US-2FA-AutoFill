@@ -1,0 +1,29 @@
+{
+    "manifest_version": 3,
+    "name": "EV 2FA Autofill",
+    "description": "Rellena el código de 2FA automáticamente en la EV",
+    "version": "2.0",
+    "icons": {
+        "16": "images/EV2FAAutoFill_16.png",
+        "128": "images/EV2FAAutoFill_128.png"
+    },
+    "action": {
+      "default_popup": "autofill.html",
+      "default_icon": "images/EV2FAAutoFill.png"
+    },
+    "permissions": [
+      "activeTab",
+      "tabs",
+      "scripting"
+    ],
+    "content_scripts": [
+      {
+        "matches": [
+          "https://sso.us.es/*"
+        ],
+        "js": [
+          "scripts/scripts.js"
+        ]
+      }
+    ]
+  }
