@@ -2,7 +2,7 @@
     "manifest_version": 3,
     "name": "EV 2FA Autofill",
     "description": "Rellena el código de 2FA automáticamente en la EV",
-    "version": "2.0",
+    "version": "3.0",
     "icons": {
         "16": "images/EV2FAAutoFill_16.png",
         "128": "images/EV2FAAutoFill_128.png"
@@ -14,7 +14,8 @@
     "permissions": [
       "activeTab",
       "tabs",
-      "scripting"
+      "scripting",
+      "storage"
     ],
     "content_scripts": [
       {

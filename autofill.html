@@ -1,25 +1,26 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="justify-content-center">
+
 <head>
     <meta charset="UTF-8">
     <title>Autofill</title>
-    <link rel="stylesheet" href="./styles/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <script src="./scripts/bootstrap.bundle.min.js"></script>
+    <script src="./scripts/bootstrap.min.js"></script>
 </head>
-<body>
-    <div class="container">
-        <h4 class="title">EV 2FA Autofill</h4>
-        <img src="./images/EV2FAAutoFill.png" width="150" class="logo">
-        <div class="grid-container">
-            <div class="item2fa"><p id="codigo2FA"></p></div>
-            <div class="copy"><button id="copyButton"><i class="fa-solid fa-copy"></i></button></div>
-            <div class="counterWrapper"><div id="counter" class="counter">Reinicio en: 30s</div></div>
-        </div>
-        <div class="contact-info">
-            <a href="https://www.twitter.com/@GalliardDev">@GalliardDev</a> | <a href="https://galliard.dev">galliard.dev</a>
-        </div>
+
+<body class="bg-dark border-us p-4">
+    <div class="bg-dark container justify-content-center row text-white p-0 m-0">
+        <h4 class="display-6 mb-1 p-0 text-center">EV 2FA Autofill</h4>
+        <small class="mb-4 p-0 text-center">Para obtener tu secret ve <a href="https://2fa.us.es/a2f/otp/bind-device" target="_blank">aquí</a><br>y dale a 'Mostrar' -> 'Mostrar parámetros de configuración'</small>
+        <input class="mb-2" id="2fa-input" type="text" name="secret" autocomplete="off" placeholder="Introduce tu secret SHA-1">
+        <img src="./images/EV2FAAutoFill.png" class="mb-2 border-us img-fluid p-0">
+        <p class="item2fa m-0 col-sm-7 mb-2 p-0 m-0 text-center display" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Copiar" id="codigo2FA">000000</p>
+        <div class="counter bg-us mt-2 mb-4" id="counter">Reinicio en: 30s</div>
+        <div class="counter bg-us text-white" id="reset">Restablecer secret</div>
     </div>
-    
     <script src="./scripts/scripts.js"></script>
 </body>
+
 </html>
